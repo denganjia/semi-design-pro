@@ -1,0 +1,28 @@
+{
+    "name": "@semi-pro/pro-table",
+    "version": "0.1.0",
+    "type": "module",
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "exports": {
+      ".": {
+        "types": "./dist/index.d.ts",
+        "import": "./dist/index.js"
+      }
+    },
+    "files": ["dist"],
+    "scripts": {
+      "build": "tsup src/index.ts --format esm --dts --external react,react-dom,@douyinfe/semi-ui",
+      "test": "vitest run",
+      "lint": "oxlint src"
+    },
+    "peerDependencies": {
+      "react": "^19.0.0",
+      "react-dom": "^19.0.0",
+      "@douyinfe/semi-ui": "^2.68.0"
+    },
+    "dependencies": {
+      "@semi-pro/core": "workspace:*"
+    }
+  }

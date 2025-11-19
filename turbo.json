@@ -5,13 +5,16 @@
     "build": {
       "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": [".next/**", "!.next/cache/**"]
+      "outputs": ["dist/**", "build/**"]
     },
     "lint": {
-      "dependsOn": ["^lint"]
+      "inputs": ["src/**", "biome.json"],
+      "cache": true
     },
-    "check-types": {
-      "dependsOn": ["^check-types"]
+    "test": {
+      "dependsOn": ["build"],
+      "inputs": ["src/**", "test/**"],
+      "cache": true
     },
     "dev": {
       "cache": false,
