@@ -1,0 +1,240 @@
+{
+  "timestamp": "2025-11-26T20:56:42",
+  "version": "1.0.0",
+  "projectName": "semi-design-pro",
+  "projectPath": "D:\\learn\\semi-design-pro",
+  "scanSummary": {
+    "totalModules": 5,
+    "totalApps": 2,
+    "totalPackages": 3,
+    "scannedFiles": 25,
+    "estimatedTotalFiles": 30,
+    "coveragePercent": 83,
+    "truncated": false
+  },
+  "modules": [
+    {
+      "name": "web",
+      "path": "apps/web",
+      "type": "application",
+      "language": "TypeScript",
+      "framework": "React 19",
+      "buildTool": "Vite 7.2.2",
+      "entry": "src/main.tsx",
+      "hasTests": false,
+      "hasConfig": true,
+      "configFiles": [
+        "vite.config.ts",
+        "tsconfig.json",
+        "eslint.config.js"
+      ],
+      "dependencies": [
+        "react@19.2.0",
+        "react-dom@19.2.0"
+      ],
+      "devDependencies": [
+        "@vitejs/plugin-react@5.1.0",
+        "babel-plugin-react-compiler@1.0.0",
+        "typescript@5.9.3",
+        "eslint@9.39.1"
+      ],
+      "specialFeatures": [
+        "React Compiler enabled"
+      ],
+      "documentation": "apps/web/CLAUDE.md"
+    },
+    {
+      "name": "docs",
+      "path": "apps/docs",
+      "type": "application",
+      "language": "Markdown",
+      "framework": "VitePress",
+      "buildTool": "VitePress 2.0.0-alpha.13",
+      "entry": ".vitepress/config.mts",
+      "hasTests": false,
+      "hasConfig": true,
+      "configFiles": [
+        ".vitepress/config.mts"
+      ],
+      "dependencies": [],
+      "devDependencies": [
+        "vitepress@2.0.0-alpha.13"
+      ],
+      "specialFeatures": [
+        "Static documentation site"
+      ],
+      "documentation": "apps/docs/CLAUDE.md"
+    },
+    {
+      "name": "pro-table",
+      "path": "packages/pro-table",
+      "type": "library",
+      "language": "TypeScript",
+      "framework": "React",
+      "buildTool": "tsup 8.5.1",
+      "entry": "src/index.ts",
+      "hasTests": true,
+      "testFramework": "vitest",
+      "hasConfig": true,
+      "configFiles": [
+        "tsup.config.ts",
+        "biome.json"
+      ],
+      "exports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "import": "./dist/index.js"
+        }
+      },
+      "peerDependencies": [
+        "react@^19.0.0",
+        "react-dom@^19.0.0",
+        "@douyinfe/semi-ui@^2.68.0"
+      ],
+      "dependencies": [
+        "@semi-pro/core@workspace:*"
+      ],
+      "specialFeatures": [
+        "Semi Design advanced table component"
+      ],
+      "status": "initialized",
+      "documentation": "packages/pro-table/CLAUDE.md"
+    },
+    {
+      "name": "core",
+      "path": "packages/core",
+      "type": "library",
+      "language": "TypeScript",
+      "framework": null,
+      "buildTool": "tsup",
+      "entry": "src/index.ts",
+      "hasTests": true,
+      "testFramework": "vitest",
+      "hasConfig": true,
+      "configFiles": [
+        "package.json"
+      ],
+      "exports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "import": "./dist/index.js"
+        }
+      },
+      "peerDependencies": [],
+      "dependencies": [],
+      "specialFeatures": [
+        "Shared utilities and types"
+      ],
+      "status": "initialized",
+      "documentation": "packages/core/CLAUDE.md"
+    },
+    {
+      "name": "typescript-config",
+      "path": "packages/typescript-config",
+      "type": "config",
+      "language": "JSON",
+      "framework": null,
+      "buildTool": null,
+      "entry": "base.json",
+      "hasTests": false,
+      "hasConfig": false,
+      "configFiles": [
+        "base.json"
+      ],
+      "providedConfigs": [
+        "base.json"
+      ],
+      "specialFeatures": [
+        "Shared TypeScript strict configuration",
+        "NodeNext module system",
+        "ES2022 target"
+      ],
+      "documentation": "packages/typescript-config/CLAUDE.md"
+    }
+  ],
+  "technology": {
+    "languages": [
+      "TypeScript",
+      "JavaScript",
+      "Markdown"
+    ],
+    "frameworks": [
+      "React 19",
+      "VitePress"
+    ],
+    "buildTools": [
+      "Turborepo 2.6.1",
+      "Vite 7.x",
+      "tsup 8.x"
+    ],
+    "packageManager": "pnpm 9.0.0",
+    "testFrameworks": [
+      "Vitest"
+    ],
+    "linters": [
+      "Biome 2.3.6",
+      "ESLint 9.x"
+    ],
+    "formatters": [
+      "Prettier 3.6.2"
+    ]
+  },
+  "ignoreRules": {
+    "source": ".gitignore",
+    "patterns": [
+      "node_modules",
+      ".pnp",
+      ".pnp.js",
+      ".env*",
+      "coverage",
+      ".turbo",
+      ".vercel",
+      ".next/",
+      "out/",
+      "build",
+      "dist",
+      "*.log*",
+      ".DS_Store",
+      "*.pem"
+    ]
+  },
+  "gaps": {
+    "missingSource": [
+      "packages/pro-table/src/",
+      "packages/core/src/"
+    ],
+    "missingTests": [
+      "apps/web",
+      "packages/pro-table",
+      "packages/core"
+    ],
+    "missingDocs": []
+  },
+  "recommendations": {
+    "immediate": [
+      "实现 packages/pro-table/src/ 组件代码",
+      "实现 packages/core/src/ 工具库代码",
+      "为 pro-table 和 core 添加单元测试"
+    ],
+    "shortTerm": [
+      "在 apps/docs 中添加组件使用文档",
+      "在 apps/web 中集成并演示 pro-table 组件",
+      "添加 CI/CD 配置（GitHub Actions）"
+    ],
+    "longTerm": [
+      "发布 pro-table 和 core 到 npm",
+      "添加更多高级组件（pro-form、pro-layout 等）",
+      "建立组件库官网"
+    ]
+  },
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
