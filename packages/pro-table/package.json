@@ -12,6 +12,26 @@
       }
     },
     "files": ["dist"],
+    "publishConfig": {
+      "access": "public",
+      "registry": "https://registry.npmjs.org/"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/denganjia/semi-design-pro.git",
+      "directory": "packages/pro-table"
+    },
+    "bugs": {
+      "url": "https://github.com/denganjia/semi-design-pro/issues"
+    },
+    "homepage": "https://github.com/denganjia/semi-design-pro#readme",
+    "keywords": [
+      "semi-design",
+      "react",
+      "table",
+      "component",
+      "pro-table"
+    ],
     "scripts": {
       "build": "tsup src/index.ts --format esm --dts --external react,react-dom,@douyinfe/semi-ui",
       "test": "vitest run",

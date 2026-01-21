@@ -1,6 +1,7 @@
 const { defineConfig } = require("cz-git");
 
 module.exports = defineConfig({
+  extends: ['@commitlint/config-conventional'],
   rules: {
     // @see: https://commitlint.js.org/#/reference-rules
   },
